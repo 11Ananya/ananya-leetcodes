@@ -32,29 +32,29 @@ class Solution(object):
                 sint+=1
             elif s[i] == 'V':
                 sint += 5
-                if s[i-1] and s[i-1] == 'I':
+                if s[i-1] == 'I':
                     sint-=2
 
             elif s[i] == 'X':
                 sint += 10
-                if s[i-1] and s[i-1] == 'I':
+                if s[i-1] == 'I':
                     sint-=2
 
             elif s[i] == 'L':
                 sint += 50
-                if s[i-1] and s[i-1] == 'X':
+                if s[i-1] == 'X':
                     sint-=20
             elif s[i] == 'C':
                 sint += 100
-                if s[i-1] and s[i-1] == 'X':
+                if s[i-1] == 'X':
                     sint-=20
             elif s[i] == 'D':
                 sint +=500
-                if s[i-1] and s[i-1] == 'C':
+                if s[i-1] == 'C':
                     sint-=200
             else:
                 sint +=1000
-                if s[i-1] and s[i-1] == 'C':
+                if s[i-1] == 'C':
                     sint-=200
 
         return sint
